@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ECACA5622A7982DA005675B7 /* Garden_QuestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECACA5612A7982DA005675B7 /* Garden_QuestApp.swift */; };
+		ECACA5642A7982DA005675B7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECACA5632A7982DA005675B7 /* ContentView.swift */; };
+		ECACA5662A7982DC005675B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECACA5652A7982DC005675B7 /* Assets.xcassets */; };
+		ECACA5692A7982DC005675B7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECACA5682A7982DC005675B7 /* Preview Assets.xcassets */; };
+		ECACA56B2A7982DC005675B7 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECACA56A2A7982DC005675B7 /* Persistence.swift */; };
+		ECACA56E2A7982DC005675B7 /* Garden_Quest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ECACA56C2A7982DC005675B7 /* Garden_Quest.xcdatamodeld */; };
+		ECACA5782A7982DC005675B7 /* Garden_QuestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECACA5772A7982DC005675B7 /* Garden_QuestTests.swift */; };
+		ECACA5822A7982DC005675B7 /* Garden_QuestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECACA5812A7982DC005675B7 /* Garden_QuestUITests.swift */; };
+		ECACA5842A7982DC005675B7 /* Garden_QuestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECACA5832A7982DC005675B7 /* Garden_QuestUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ECACA5742A7982DC005675B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECACA5562A7982DA005675B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECACA55D2A7982DA005675B7;
+			remoteInfo = "Garden Quest";
+		};
+		ECACA57E2A7982DC005675B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECACA5562A7982DA005675B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECACA55D2A7982DA005675B7;
+			remoteInfo = "Garden Quest";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ECACA55E2A7982DA005675B7 /* Garden Quest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Garden Quest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECACA5612A7982DA005675B7 /* Garden_QuestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Garden_QuestApp.swift; sourceTree = "<group>"; };
+		ECACA5632A7982DA005675B7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		ECACA5652A7982DC005675B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ECACA5682A7982DC005675B7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		ECACA56A2A7982DC005675B7 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		ECACA56D2A7982DC005675B7 /* Garden_Quest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Garden_Quest.xcdatamodel; sourceTree = "<group>"; };
+		ECACA5732A7982DC005675B7 /* Garden QuestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Garden QuestTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECACA5772A7982DC005675B7 /* Garden_QuestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Garden_QuestTests.swift; sourceTree = "<group>"; };
+		ECACA57D2A7982DC005675B7 /* Garden QuestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Garden QuestUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECACA5812A7982DC005675B7 /* Garden_QuestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Garden_QuestUITests.swift; sourceTree = "<group>"; };
+		ECACA5832A7982DC005675B7 /* Garden_QuestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Garden_QuestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ECACA55B2A7982DA005675B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECACA5702A7982DC005675B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECACA57A2A7982DC005675B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ECACA5552A7982DA005675B7 = {
+			isa = PBXGroup;
+			children = (
+				ECACA5602A7982DA005675B7 /* Garden Quest */,
+				ECACA5762A7982DC005675B7 /* Garden QuestTests */,
+				ECACA5802A7982DC005675B7 /* Garden QuestUITests */,
+				ECACA55F2A7982DA005675B7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ECACA55F2A7982DA005675B7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ECACA55E2A7982DA005675B7 /* Garden Quest.app */,
+				ECACA5732A7982DC005675B7 /* Garden QuestTests.xctest */,
+				ECACA57D2A7982DC005675B7 /* Garden QuestUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ECACA5602A7982DA005675B7 /* Garden Quest */ = {
+			isa = PBXGroup;
+			children = (
+				ECACA5612A7982DA005675B7 /* Garden_QuestApp.swift */,
+				ECACA5632A7982DA005675B7 /* ContentView.swift */,
+				ECACA5652A7982DC005675B7 /* Assets.xcassets */,
+				ECACA56A2A7982DC005675B7 /* Persistence.swift */,
+				ECACA56C2A7982DC005675B7 /* Garden_Quest.xcdatamodeld */,
+				ECACA5672A7982DC005675B7 /* Preview Content */,
+			);
+			path = "Garden Quest";
+			sourceTree = "<group>";
+		};
+		ECACA5672A7982DC005675B7 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				ECACA5682A7982DC005675B7 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		ECACA5762A7982DC005675B7 /* Garden QuestTests */ = {
+			isa = PBXGroup;
+			children = (
+				ECACA5772A7982DC005675B7 /* Garden_QuestTests.swift */,
+			);
+			path = "Garden QuestTests";
+			sourceTree = "<group>";
+		};
+		ECACA5802A7982DC005675B7 /* Garden QuestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ECACA5812A7982DC005675B7 /* Garden_QuestUITests.swift */,
+				ECACA5832A7982DC005675B7 /* Garden_QuestUITestsLaunchTests.swift */,
+			);
+			path = "Garden QuestUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ECACA55D2A7982DA005675B7 /* Garden Quest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECACA5872A7982DC005675B7 /* Build configuration list for PBXNativeTarget "Garden Quest" */;
+			buildPhases = (
+				ECACA55A2A7982DA005675B7 /* Sources */,
+				ECACA55B2A7982DA005675B7 /* Frameworks */,
+				ECACA55C2A7982DA005675B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Garden Quest";
+			productName = "Garden Quest";
+			productReference = ECACA55E2A7982DA005675B7 /* Garden Quest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ECACA5722A7982DC005675B7 /* Garden QuestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECACA58A2A7982DC005675B7 /* Build configuration list for PBXNativeTarget "Garden QuestTests" */;
+			buildPhases = (
+				ECACA56F2A7982DC005675B7 /* Sources */,
+				ECACA5702A7982DC005675B7 /* Frameworks */,
+				ECACA5712A7982DC005675B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ECACA5752A7982DC005675B7 /* PBXTargetDependency */,
+			);
+			name = "Garden QuestTests";
+			productName = "Garden QuestTests";
+			productReference = ECACA5732A7982DC005675B7 /* Garden QuestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ECACA57C2A7982DC005675B7 /* Garden QuestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECACA58D2A7982DC005675B7 /* Build configuration list for PBXNativeTarget "Garden QuestUITests" */;
+			buildPhases = (
+				ECACA5792A7982DC005675B7 /* Sources */,
+				ECACA57A2A7982DC005675B7 /* Frameworks */,
+				ECACA57B2A7982DC005675B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ECACA57F2A7982DC005675B7 /* PBXTargetDependency */,
+			);
+			name = "Garden QuestUITests";
+			productName = "Garden QuestUITests";
+			productReference = ECACA57D2A7982DC005675B7 /* Garden QuestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ECACA5562A7982DA005675B7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					ECACA55D2A7982DA005675B7 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					ECACA5722A7982DC005675B7 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = ECACA55D2A7982DA005675B7;
+					};
+					ECACA57C2A7982DC005675B7 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = ECACA55D2A7982DA005675B7;
+					};
+				};
+			};
+			buildConfigurationList = ECACA5592A7982DA005675B7 /* Build configuration list for PBXProject "Garden Quest" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ECACA5552A7982DA005675B7;
+			productRefGroup = ECACA55F2A7982DA005675B7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ECACA55D2A7982DA005675B7 /* Garden Quest */,
+				ECACA5722A7982DC005675B7 /* Garden QuestTests */,
+				ECACA57C2A7982DC005675B7 /* Garden QuestUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ECACA55C2A7982DA005675B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECACA5692A7982DC005675B7 /* Preview Assets.xcassets in Resources */,
+				ECACA5662A7982DC005675B7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECACA5712A7982DC005675B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECACA57B2A7982DC005675B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ECACA55A2A7982DA005675B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECACA56B2A7982DC005675B7 /* Persistence.swift in Sources */,
+				ECACA5642A7982DA005675B7 /* ContentView.swift in Sources */,
+				ECACA5622A7982DA005675B7 /* Garden_QuestApp.swift in Sources */,
+				ECACA56E2A7982DC005675B7 /* Garden_Quest.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECACA56F2A7982DC005675B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECACA5782A7982DC005675B7 /* Garden_QuestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECACA5792A7982DC005675B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECACA5842A7982DC005675B7 /* Garden_QuestUITestsLaunchTests.swift in Sources */,
+				ECACA5822A7982DC005675B7 /* Garden_QuestUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ECACA5752A7982DC005675B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ECACA55D2A7982DA005675B7 /* Garden Quest */;
+			targetProxy = ECACA5742A7982DC005675B7 /* PBXContainerItemProxy */;
+		};
+		ECACA57F2A7982DC005675B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ECACA55D2A7982DA005675B7 /* Garden Quest */;
+			targetProxy = ECACA57E2A7982DC005675B7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		ECACA5852A7982DC005675B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ECACA5862A7982DC005675B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ECACA5882A7982DC005675B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Garden Quest/Preview Content\"";
+				DEVELOPMENT_TEAM = B64MGY93X6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jorismarhuenda.Garden-Quest";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ECACA5892A7982DC005675B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Garden Quest/Preview Content\"";
+				DEVELOPMENT_TEAM = B64MGY93X6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jorismarhuenda.Garden-Quest";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		ECACA58B2A7982DC005675B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B64MGY93X6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jorismarhuenda.Garden-QuestTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Garden Quest.app/Garden Quest";
+			};
+			name = Debug;
+		};
+		ECACA58C2A7982DC005675B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B64MGY93X6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jorismarhuenda.Garden-QuestTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Garden Quest.app/Garden Quest";
+			};
+			name = Release;
+		};
+		ECACA58E2A7982DC005675B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B64MGY93X6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jorismarhuenda.Garden-QuestUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Garden Quest";
+			};
+			name = Debug;
+		};
+		ECACA58F2A7982DC005675B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B64MGY93X6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jorismarhuenda.Garden-QuestUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Garden Quest";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ECACA5592A7982DA005675B7 /* Build configuration list for PBXProject "Garden Quest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECACA5852A7982DC005675B7 /* Debug */,
+				ECACA5862A7982DC005675B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECACA5872A7982DC005675B7 /* Build configuration list for PBXNativeTarget "Garden Quest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECACA5882A7982DC005675B7 /* Debug */,
+				ECACA5892A7982DC005675B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECACA58A2A7982DC005675B7 /* Build configuration list for PBXNativeTarget "Garden QuestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECACA58B2A7982DC005675B7 /* Debug */,
+				ECACA58C2A7982DC005675B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECACA58D2A7982DC005675B7 /* Build configuration list for PBXNativeTarget "Garden QuestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECACA58E2A7982DC005675B7 /* Debug */,
+				ECACA58F2A7982DC005675B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		ECACA56C2A7982DC005675B7 /* Garden_Quest.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				ECACA56D2A7982DC005675B7 /* Garden_Quest.xcdatamodel */,
+			);
+			currentVersion = ECACA56D2A7982DC005675B7 /* Garden_Quest.xcdatamodel */;
+			path = Garden_Quest.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = ECACA5562A7982DA005675B7 /* Project object */;
+}
