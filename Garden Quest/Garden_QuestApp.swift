@@ -279,16 +279,16 @@ struct GardenView: View {
         .sheet(isPresented: $isShowingStore) {
             StoreView(viewModel: viewModel)
                 .padding()
-                        .alert(isPresented: Binding(
-                                get: { viewModel.isShowingInsufficientCoinsAlert },
-                                set: { viewModel.isShowingInsufficientCoinsAlert = $0 }
-                            )
-                        ) {
+                        .alert(isPresented: $viewModel.isShowingInsufficientCoinsAlert) {
                             Alert(
                                 title: Text("Insufficient Coins"),
                                 message: Text("You don't have enough coins to plant a new flower."),
                                 dismissButton: .default(Text("Got it!"))
                             )
+                        }
+                        .sheet(isPresented: $isShowingStore) {
+                            StoreView(viewModel: viewModel)
+                                .environmentObject(viewModel) // Pass the GardenViewModel to the StoreView
             }
         }
     }
