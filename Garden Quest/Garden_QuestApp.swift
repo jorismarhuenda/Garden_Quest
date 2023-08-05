@@ -50,6 +50,8 @@ class GardenViewModel: ObservableObject {
     @Published var quests: [Quest] = []
     @Published var achievements: [Achievement] = []
     @Published var isShowingInsufficientCoinsAlert: Bool = false
+    @Published var isShowingStore: Bool = false
+    @Published var didShowStore: Bool = false
 
     struct Seed: Identifiable { // Add Identifiable conformance here
             let id = UUID()
@@ -273,12 +275,26 @@ struct GardenView: View {
                     .foregroundColor(.white)
                 }
             }
-            .padding()
-            }
-        }
-        .sheet(isPresented: $isShowingStore) {
-            StoreView(viewModel: viewModel)
-                .padding()
+            
+            // Show Store Button
+                        Button(action: {
+                            viewModel.isShowingStore = true
+                        }) {
+                            Text("Open Store")
+                                .padding()
+                                .foregroundColor(.white)
+                                .background(Color.blue)
+                                .cornerRadius(10)
+                        }
+                        .padding()
+                    }
+                    .padding()
+                    .sheet(isPresented: $viewModel.isShowingStore) {
+                        StoreView(viewModel: viewModel)
+                            .onAppear {
+                                viewModel.didShowStore = true
+                            }
+                    }
                         .alert(isPresented: $viewModel.isShowingInsufficientCoinsAlert) {
                             Alert(
                                 title: Text("Insufficient Coins"),
@@ -330,6 +346,7 @@ struct StoreView: View {
             Color.blue
             .edgesIgnoringSafeArea(.all)
 
+    ScrollView {
         VStack {
             Text("In-App Store")
                 .font(.title)
@@ -401,6 +418,7 @@ struct StoreView: View {
         }
         .alert(isPresented: $viewModel.isShowingInsufficientCoinsAlert) {
                     Alert(title: Text("Insufficient Coins"), message: Text("You don't have enough coins to buy this seed."), dismissButton: .default(Text("Got it!")))
+                }
             }
         }
     }
