@@ -16,6 +16,15 @@
 		ECACA5782A7982DC005675B7 /* Garden_QuestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECACA5772A7982DC005675B7 /* Garden_QuestTests.swift */; };
 		ECACA5822A7982DC005675B7 /* Garden_QuestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECACA5812A7982DC005675B7 /* Garden_QuestUITests.swift */; };
 		ECACA5842A7982DC005675B7 /* Garden_QuestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECACA5832A7982DC005675B7 /* Garden_QuestUITestsLaunchTests.swift */; };
+		ECB909FB2A7FBA19008D3891 /* Flower.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB909FA2A7FBA19008D3891 /* Flower.swift */; };
+		ECB909FD2A7FBA29008D3891 /* Quest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB909FC2A7FBA29008D3891 /* Quest.swift */; };
+		ECB909FF2A7FBA43008D3891 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB909FE2A7FBA43008D3891 /* Achievement.swift */; };
+		ECB90A012A7FBA8A008D3891 /* GardenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB90A002A7FBA8A008D3891 /* GardenViewModel.swift */; };
+		ECB90A032A7FBAC7008D3891 /* GardenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB90A022A7FBAC7008D3891 /* GardenView.swift */; };
+		ECB90A052A7FBB02008D3891 /* FlowerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB90A042A7FBB02008D3891 /* FlowerView.swift */; };
+		ECB90A072A7FBB29008D3891 /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB90A062A7FBB29008D3891 /* StoreView.swift */; };
+		ECB90A092A7FBC85008D3891 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB90A082A7FBC85008D3891 /* Player.swift */; };
+		ECB90A0B2A7FBDBB008D3891 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB90A0A2A7FBDBB008D3891 /* ProgressBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +57,15 @@
 		ECACA57D2A7982DC005675B7 /* Garden QuestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Garden QuestUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECACA5812A7982DC005675B7 /* Garden_QuestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Garden_QuestUITests.swift; sourceTree = "<group>"; };
 		ECACA5832A7982DC005675B7 /* Garden_QuestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Garden_QuestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		ECB909FA2A7FBA19008D3891 /* Flower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flower.swift; sourceTree = "<group>"; };
+		ECB909FC2A7FBA29008D3891 /* Quest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quest.swift; sourceTree = "<group>"; };
+		ECB909FE2A7FBA43008D3891 /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
+		ECB90A002A7FBA8A008D3891 /* GardenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenViewModel.swift; sourceTree = "<group>"; };
+		ECB90A022A7FBAC7008D3891 /* GardenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenView.swift; sourceTree = "<group>"; };
+		ECB90A042A7FBB02008D3891 /* FlowerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerView.swift; sourceTree = "<group>"; };
+		ECB90A062A7FBB29008D3891 /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
+		ECB90A082A7FBC85008D3891 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		ECB90A0A2A7FBDBB008D3891 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +117,15 @@
 			isa = PBXGroup;
 			children = (
 				ECACA5612A7982DA005675B7 /* Garden_QuestApp.swift */,
+				ECB909FC2A7FBA29008D3891 /* Quest.swift */,
+				ECB90A082A7FBC85008D3891 /* Player.swift */,
+				ECB909FE2A7FBA43008D3891 /* Achievement.swift */,
+				ECB90A022A7FBAC7008D3891 /* GardenView.swift */,
+				ECB90A062A7FBB29008D3891 /* StoreView.swift */,
+				ECB90A042A7FBB02008D3891 /* FlowerView.swift */,
+				ECB90A002A7FBA8A008D3891 /* GardenViewModel.swift */,
+				ECB90A0A2A7FBDBB008D3891 /* ProgressBar.swift */,
+				ECB909FA2A7FBA19008D3891 /* Flower.swift */,
 				ECACA5632A7982DA005675B7 /* ContentView.swift */,
 				ECACA5652A7982DC005675B7 /* Assets.xcassets */,
 				ECACA56A2A7982DC005675B7 /* Persistence.swift */,
@@ -265,7 +292,16 @@
 			files = (
 				ECACA56B2A7982DC005675B7 /* Persistence.swift in Sources */,
 				ECACA5642A7982DA005675B7 /* ContentView.swift in Sources */,
+				ECB90A072A7FBB29008D3891 /* StoreView.swift in Sources */,
+				ECB909FF2A7FBA43008D3891 /* Achievement.swift in Sources */,
+				ECB90A092A7FBC85008D3891 /* Player.swift in Sources */,
+				ECB909FB2A7FBA19008D3891 /* Flower.swift in Sources */,
+				ECB90A032A7FBAC7008D3891 /* GardenView.swift in Sources */,
 				ECACA5622A7982DA005675B7 /* Garden_QuestApp.swift in Sources */,
+				ECB90A012A7FBA8A008D3891 /* GardenViewModel.swift in Sources */,
+				ECB90A052A7FBB02008D3891 /* FlowerView.swift in Sources */,
+				ECB90A0B2A7FBDBB008D3891 /* ProgressBar.swift in Sources */,
+				ECB909FD2A7FBA29008D3891 /* Quest.swift in Sources */,
 				ECACA56E2A7982DC005675B7 /* Garden_Quest.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
