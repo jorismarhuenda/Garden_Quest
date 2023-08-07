@@ -99,6 +99,18 @@ struct GardenView: View {
                             }
                             .padding(.top, 20)
             
+            // Button to claim the daily reward
+                        Button(action: {
+                            viewModel.claimDailyReward()
+                        }) {
+                            Text("Claim Daily Reward (20 Coins)")
+                        }
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(Color.blue)
+                        .cornerRadius(10)
+                        .disabled(!viewModel.canClaimReward) // Disable the button if the reward is not available to claim
+            
             // Show Store Button
                         Button(action: {
                             viewModel.isShowingStore = true

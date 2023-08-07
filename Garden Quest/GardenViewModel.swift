@@ -28,6 +28,9 @@ class GardenViewModel: ObservableObject {
     @Published var purchasedFlowers: [Flower] = []
     @Published var showAlertWaitForFreeCoins = false
     @Published var alertWaitForFreeCoinsMessage = ""
+    @Published var lastRewardDate: Date?
+    @Published var isClaimingReward = false
+    @Published var canClaimReward = false
 
     struct Seed: Identifiable { // Add Identifiable conformance here
             let id = UUID()
@@ -89,6 +92,31 @@ class GardenViewModel: ObservableObject {
             formatter.allowedUnits = [.hour, .minute, .second]
             formatter.unitsStyle = .abbreviated
             return formatter.string(from: TimeInterval(timeInterval)) ?? ""
+        }
+    
+    private func updateDailyRewardStatus() {
+            let currentDate = Date()
+            
+            if let lastRewardDate = lastRewardDate {
+                let calendar = Calendar.current
+                if !calendar.isDate(currentDate, inSameDayAs: lastRewardDate) {
+                    canClaimReward = true
+                } else {
+                    canClaimReward = false
+                }
+            } else {
+                canClaimReward = true
+            }
+        }
+    
+    // Function to claim the daily reward
+        func claimDailyReward() {
+            if canClaimReward {
+                coins += 20 // For example, reward the player with 20 coins daily
+                lastRewardDate = Date()
+                canClaimReward = false
+                // Optional: Show a message or alert indicating the reward was claimed successfully
+            }
         }
     
     // Function to buy an item from the shop
