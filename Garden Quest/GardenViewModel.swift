@@ -17,6 +17,17 @@ class GardenViewModel: ObservableObject {
     @Published var isShowingStore: Bool = false
     @Published var didShowStore: Bool = false
     @Published var player: Player // Player property added
+    @Published var availableShopItems: [ShopItem] = [
+            ShopItem(name: "Daisy Seed", price: 10, category: .seed),
+            ShopItem(name: "Rose Seed", price: 15, category: .seed),
+            ShopItem(name: "Accelerator 2x", price: 20, category: .item),
+            ShopItem(name: "Accelerator 5x", price: 50, category: .item)
+        ]
+    @Published var selectedCategory: ShopCategory = .seed
+    @Published var purchasedSeeds: [Seed] = []
+    @Published var purchasedFlowers: [Flower] = []
+    @Published var showAlertWaitForFreeCoins = false
+    @Published var alertWaitForFreeCoinsMessage = ""
 
     struct Seed: Identifiable { // Add Identifiable conformance here
             let id = UUID()
@@ -70,6 +81,38 @@ class GardenViewModel: ObservableObject {
         self.player = Player(name: "Player") // Initialize the player with a default name
     }
 
+    private func timeRemainingForNextFreeCoins() -> String {
+            let currentTimeStamp = Date().timeIntervalSince1970
+            let lastReceivedTimestamp = UserDefaults.standard.double(forKey: "LastReceivedTimestamp")
+            let timeInterval = 24 * 60 * 60 - (currentTimeStamp - lastReceivedTimestamp)
+            let formatter = DateComponentsFormatter()
+            formatter.allowedUnits = [.hour, .minute, .second]
+            formatter.unitsStyle = .abbreviated
+            return formatter.string(from: TimeInterval(timeInterval)) ?? ""
+        }
+    
+    // Function to buy an item from the shop
+        func buyShopItem(_ item: ShopItem) {
+            if coins >= item.price {
+                coins -= item.price
+                switch item.category {
+                case .seed:
+                    // Ensure the provided item name is a valid flower name
+                    if let flower = Flower.availableFlowers.first(where: { $0.name == item.name }) {
+                        // Add the purchased seed to the player's inventory
+                        let seed = Seed(flower: flower, cost: item.price)
+                        purchasedSeeds.append(seed)
+                    }
+                case .item:
+                    // Add the purchased item to the player's inventory
+                    let purchasedItem = Items(name: item.name)
+                    player.purchasedItems.append(purchasedItem)
+                }
+            } else {
+                isShowingInsufficientCoinsAlert = true
+            }
+        }
+    
     func buySeed(_ flower: Flower, cost: Int) {
             if coins >= cost {
                 coins -= cost
@@ -126,6 +169,23 @@ class GardenViewModel: ObservableObject {
                 let copy = Quest(title: quest.title, description: quest.description)
                 copy.isCompleted = quest.isCompleted
                 return copy
+            }
+        }
+    
+    // Function to receive free coins
+        func receiveFreeCoins() {
+            let currentTimeStamp = Date().timeIntervalSince1970
+            let lastReceivedTimestamp = UserDefaults.standard.double(forKey: "LastReceivedTimestamp")
+
+            // Check if 24 hours have passed since the last received time
+            if currentTimeStamp - lastReceivedTimestamp >= 24 * 60 * 60 {
+                coins += 10
+                UserDefaults.standard.set(currentTimeStamp, forKey: "LastReceivedTimestamp")
+            } else {
+                // Show an alert indicating the remaining time for the next free coin reward
+                let timeRemaining = timeRemainingForNextFreeCoins()
+                showAlertWaitForFreeCoins = true
+                alertWaitForFreeCoinsMessage = "You can receive free coins again in \(timeRemaining)."
             }
         }
     

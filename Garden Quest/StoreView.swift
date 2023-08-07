@@ -11,93 +11,93 @@ import SwiftUI
 struct StoreView: View {
     @ObservedObject var viewModel: GardenViewModel
     @State private var isShowingAlert: Bool = false
+    @State private var showAlertWaitForFreeCoins = false
+    @State private var alertWaitForFreeCoinsMessage = ""
 
     var body: some View {
-        ZStack {
-            // Background Color
-            Color.blue
-            .edgesIgnoringSafeArea(.all)
-
-    ScrollView {
-        VStack {
-            Text("In-App Store")
-                .font(.title)
-                .foregroundColor(.white)
-                .padding()
-
-            HStack {
-                Button(action: {
-                    viewModel.collectCoins()
-                    isShowingAlert = true
-                }) {
-                    Text("Buy 10 Coins (Free)")
+        NavigationView {
+                    VStack {
+                        Text("Shop").font(.largeTitle).padding(.top)
+                        Picker("Category", selection: $viewModel.selectedCategory) {
+                            ForEach(ShopCategory.allCases, id: \.self) { category in
+                                Text(category.rawValue).tag(category)
+                            }
+                        }
+                        .pickerStyle(SegmentedPickerStyle())
                         .padding()
-                        .background(Color.green)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                }
-                Button(action: {
-                    viewModel.buyAccelerator()
-                }) {
-                    Text("Buy Flower Accelerator (Cost: 20 Coins)")
-                        .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                }
-            }
-            .padding()
-
-            // Flower seeds for sale
-                        VStack {
-                            Text("Flower Seeds:")
-                                .font(.headline)
-                                .foregroundColor(.white)
-                                .padding(.top)
-                            ForEach(viewModel.availableSeeds) { seed in
-                                Button(action: {
-                                    viewModel.buySeed(seed.flower, cost: seed.cost)
-                                }) {
-                                    HStack {
-                                        Image(systemName: "seedling")
-                                            .resizable()
-                                            .frame(width: 30, height: 30)
-                                            .foregroundColor(.green)
-
-                                        Text("\(seed.flower.name) Seed")
-                                            .font(.headline)
-                                            .foregroundColor(.white)
-
-                                        Text("Cost: \(seed.cost) Coins, Growth Time: \(seed.flower.growthTime) seconds")
-                                            .font(.subheadline)
-                                            .foregroundColor(.white)
-
-                                        Spacer()
+                        
+                        // Button to receive free coins
+                                    Button(action: {
+                                        viewModel.receiveFreeCoins()
+                                    }) {
+                                        Text("Receive 10 Free Coins")
                                     }
                                     .padding()
-                                    .background(Color.yellow)
                                     .foregroundColor(.white)
+                                    .background(Color.green)
                                     .cornerRadius(10)
-                                    .disabled(viewModel.coins < seed.cost) // Disable the button if not enough coins
-                    }
-                                .padding(.bottom, 10)
-                }
-            }
-        }
+                                    .alert(isPresented: $showAlertWaitForFreeCoins) {
+                                        Alert(
+                                            title: Text("Wait for Free Coins"),
+                                            message: Text(alertWaitForFreeCoinsMessage),
+                                            dismissButton: .default(Text("OK"))
+                                        )
+                                    }
+                        List(viewModel.availableShopItems.filter({ $0.category == viewModel.selectedCategory })) { item in
+                            HStack {
+                                Text(item.name)
+                                Spacer()
+                                Text("\(item.price) Coins")
+                                Button(action: {
+                                    viewModel.buyShopItem(item)
+                                }) {
+
+                                    NavigationView {
+                                                VStack {
+                                                    Text("Shop").font(.largeTitle).padding(.top)
+                                                    Picker("Category", selection: $viewModel.selectedCategory) {
+                                                        ForEach(ShopCategory.allCases, id: \.self) { category in
+                                                            Text(category.rawValue).tag(category)
+                                                        }
+                                                    }
+                                                    .pickerStyle(SegmentedPickerStyle())
+                                                    .padding()
+
+                                                    List(viewModel.availableShopItems.filter({ $0.category == viewModel.selectedCategory })) { item in
+                                                        HStack {
+                                                            Text(item.name)
+                                                            Spacer()
+                                                            Text("\(item.price) Coins")
+                                                            Button(action: {
+                                                                                        viewModel.buyShopItem(item) // Pass the 'item' as an argument
+                                                                                    }) {
+                                                                                        Text("Buy")
+                                                                                            .padding(8)
+                                                                                            .background(Color.blue)
+                                                                                            .foregroundColor(.white)
+                                                                                            .cornerRadius(8)
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                            .listStyle(InsetGroupedListStyle())
+
+                                                                            Spacer()
+                                                                        }
+                                                                        .navigationBarItems(trailing: Button("Close", action: {
+                                                                            viewModel.isShowingStore = false
+                                                                        }))
         .padding()
         .alert(isPresented: $isShowingAlert) {
             Alert(title: Text("Coins Purchased"), message: Text("You received 10 coins for free!"), dismissButton: .default(Text("Got it!")))
         }
         .alert(isPresented: $viewModel.isShowingInsufficientCoinsAlert) {
                     Alert(title: Text("Insufficient Coins"), message: Text("You don't have enough coins to buy this seed."), dismissButton: .default(Text("Got it!")))
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
     }
 }
-
-struct StoreView_Previews: PreviewProvider {
-        static var previews: some View {
-            StoreView(viewModel: GardenViewModel())
-        }
-    }

@@ -25,6 +25,9 @@
 		ECB90A072A7FBB29008D3891 /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB90A062A7FBB29008D3891 /* StoreView.swift */; };
 		ECB90A092A7FBC85008D3891 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB90A082A7FBC85008D3891 /* Player.swift */; };
 		ECB90A0B2A7FBDBB008D3891 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB90A0A2A7FBDBB008D3891 /* ProgressBar.swift */; };
+		ECB90A0D2A8002BC008D3891 /* ShopItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB90A0C2A8002BC008D3891 /* ShopItem.swift */; };
+		ECB90A0F2A80103B008D3891 /* Seed.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB90A0E2A80103B008D3891 /* Seed.swift */; };
+		ECB90A152A80E99D008D3891 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB90A142A80E99D008D3891 /* Items.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +69,9 @@
 		ECB90A062A7FBB29008D3891 /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
 		ECB90A082A7FBC85008D3891 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		ECB90A0A2A7FBDBB008D3891 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		ECB90A0C2A8002BC008D3891 /* ShopItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopItem.swift; sourceTree = "<group>"; };
+		ECB90A0E2A80103B008D3891 /* Seed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seed.swift; sourceTree = "<group>"; };
+		ECB90A142A80E99D008D3891 /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,10 +124,13 @@
 			children = (
 				ECACA5612A7982DA005675B7 /* Garden_QuestApp.swift */,
 				ECB909FC2A7FBA29008D3891 /* Quest.swift */,
+				ECB90A142A80E99D008D3891 /* Items.swift */,
 				ECB90A082A7FBC85008D3891 /* Player.swift */,
 				ECB909FE2A7FBA43008D3891 /* Achievement.swift */,
 				ECB90A022A7FBAC7008D3891 /* GardenView.swift */,
 				ECB90A062A7FBB29008D3891 /* StoreView.swift */,
+				ECB90A0C2A8002BC008D3891 /* ShopItem.swift */,
+				ECB90A0E2A80103B008D3891 /* Seed.swift */,
 				ECB90A042A7FBB02008D3891 /* FlowerView.swift */,
 				ECB90A002A7FBA8A008D3891 /* GardenViewModel.swift */,
 				ECB90A0A2A7FBDBB008D3891 /* ProgressBar.swift */,
@@ -292,11 +301,14 @@
 			files = (
 				ECACA56B2A7982DC005675B7 /* Persistence.swift in Sources */,
 				ECACA5642A7982DA005675B7 /* ContentView.swift in Sources */,
+				ECB90A0D2A8002BC008D3891 /* ShopItem.swift in Sources */,
 				ECB90A072A7FBB29008D3891 /* StoreView.swift in Sources */,
 				ECB909FF2A7FBA43008D3891 /* Achievement.swift in Sources */,
 				ECB90A092A7FBC85008D3891 /* Player.swift in Sources */,
 				ECB909FB2A7FBA19008D3891 /* Flower.swift in Sources */,
 				ECB90A032A7FBAC7008D3891 /* GardenView.swift in Sources */,
+				ECB90A152A80E99D008D3891 /* Items.swift in Sources */,
+				ECB90A0F2A80103B008D3891 /* Seed.swift in Sources */,
 				ECACA5622A7982DA005675B7 /* Garden_QuestApp.swift in Sources */,
 				ECB90A012A7FBA8A008D3891 /* GardenViewModel.swift in Sources */,
 				ECB90A052A7FBB02008D3891 /* FlowerView.swift in Sources */,

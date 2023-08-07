@@ -14,7 +14,9 @@ struct Player {
     var experience: Int
     var score: Int
     var achievements: [Achievement]
-    var purchasedFlowers: [Flower] // Changed from [Item] to [Flower]
+    var purchasedFlowers: [Flower]
+    var purchasedSeeds: [Seed] // Array to store purchased seeds
+    var purchasedItems: [Items] // Array to store purchased items
 
     init(name: String) {
         self.name = name
@@ -23,6 +25,8 @@ struct Player {
         self.score = 0
         self.achievements = []
         self.purchasedFlowers = []
+        self.purchasedSeeds = []
+        self.purchasedItems = []
     }
     
     
