@@ -19,4 +19,5 @@ struct ShopItem: Identifiable {
     let name: String
     let price: Int
     let category: ShopCategory
+    let cost: Int
 }

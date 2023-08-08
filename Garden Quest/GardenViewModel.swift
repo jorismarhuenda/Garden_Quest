@@ -17,11 +17,11 @@ class GardenViewModel: ObservableObject {
     @Published var isShowingStore: Bool = false
     @Published var didShowStore: Bool = false
     @Published var player: Player // Player property added
-    @Published var availableShopItems: [ShopItem] = [
-            ShopItem(name: "Daisy Seed", price: 10, category: .seed),
-            ShopItem(name: "Rose Seed", price: 15, category: .seed),
+    @Published var availableShopItems: [ShopItem] =
             ShopItem(name: "Accelerator 2x", price: 20, category: .item),
             ShopItem(name: "Accelerator 5x", price: 50, category: .item)
+            ShopItem(name: "Fertilizer", category: .item, cost: 5),
+            ShopItem(name: "Watering Can", category: .item, cost: 8)
         ]
     @Published var selectedCategory: ShopCategory = .seed
     @Published var purchasedSeeds: [Seed] = []
@@ -38,36 +38,37 @@ class GardenViewModel: ObservableObject {
             let cost: Int
         }
 
-    var availableSeeds: [Seed] {
-        return [
-            Seed(flower: Flower(name: "Rose", growthTime: 10), cost: 20),
-            Seed(flower: Flower(name: "Lily", growthTime: 8), cost: 15),
-            Seed(flower: Flower(name: "Sunflower", growthTime: 12), cost: 25),
-            Seed(flower: Flower(name: "Tulip", growthTime: 6), cost: 10),
-            Seed(flower: Flower(name: "Daffodil", growthTime: 7), cost: 12),
-            Seed(flower: Flower(name: "Orchid", growthTime: 9), cost: 18),
-            Seed(flower: Flower(name: "Peony", growthTime: 11), cost: 22),
-            Seed(flower: Flower(name: "Carnation", growthTime: 5), cost: 8),
-            Seed(flower: Flower(name: "Daisy", growthTime: 6), cost: 10),
-            Seed(flower: Flower(name: "Bluebell", growthTime: 8), cost: 14),
-            Seed(flower: Flower(name: "Cherry Blossom", growthTime: 7), cost: 13),
-            Seed(flower: Flower(name: "Hydrangea", growthTime: 10), cost: 20),
-            Seed(flower: Flower(name: "Hibiscus", growthTime: 9), cost: 17),
-            Seed(flower: Flower(name: "Marigold", growthTime: 6), cost: 10),
-            Seed(flower: Flower(name: "Dahlia", growthTime: 11), cost: 24),
-            Seed(flower: Flower(name: "Poppy", growthTime: 5), cost: 9),
-            Seed(flower: Flower(name: "Iris", growthTime: 7), cost: 12),
-            Seed(flower: Flower(name: "Crocus", growthTime: 8), cost: 15),
-            Seed(flower: Flower(name: "Lavender", growthTime: 9), cost: 18),
-            Seed(flower: Flower(name: "Zinnia", growthTime: 10), cost: 20),
+    var availableSeeds: [Seed] = [
+            Seed(flower: Flower(name: "Rose", growthTime: 10, cost: 20, imageName: "Rose"), growthTime: 10, cost: 20),
+            Seed(flower: Flower(name: "Lily", growthTime: 8, cost: 15, imageName: "Lily"), growthTime: 8, cost: 15),
+            Seed(flower: Flower(name: "Sunflower", growthTime: 12, cost: 25, imageName: "Sunflower"), growthTime: 12, cost: 25),
+            Seed(flower: Flower(name: "Tulip", growthTime: 6, cost: 10, imageName: "Tulip"),
+            Seed(flower: Flower(name: "Daffodil", growthTime: 7, cost: 12, imageName: "Daffodil"),
+            Seed(flower: Flower(name: "Orchid", growthTime: 9, cost: 18, imageName: "Orchid"),
+            Seed(flower: Flower(name: "Peony", growthTime: 11, cost: 22, imageName: "Peony"),
+            Seed(flower: Flower(name: "Carnation", growthTime: 5, cost: 8, imageName: "Carnation"),
+            Seed(flower: Flower(name: "Daisy", growthTime: 6, cost: 10, imageName: "Daisy"),
+            Seed(flower: Flower(name: "Bluebell", growthTime: 8, cost: 14, imageName: "Bluebell"),
+            Seed(flower: Flower(name: "Cherry Blossom", growthTime: 7, cost: 13, imageName: "Cherry Blossom"),
+            Seed(flower: Flower(name: "Hydrangea", growthTime: 10, cost: 20, imageName: "Hydrangea"),
+            Seed(flower: Flower(name: "Hibiscus", growthTime: 9, cost: 17, imageName: "Hibiscus"),
+            Seed(flower: Flower(name: "Marigold", growthTime: 6, cost: 10, imageName: "Marigold"),
+            Seed(flower: Flower(name: "Dahlia", growthTime: 11, cost: 24, imageName: "Dahlia"),
+            Seed(flower: Flower(name: "Poppy", growthTime: 5, cost: 9, imageName: "Poppy"),
+            Seed(flower: Flower(name: "Iris", growthTime: 7, cost: 12, imageName: "Iris"),
+            Seed(flower: Flower(name: "Crocus", growthTime: 8, cost: 15, imageName: "Crocus"),
+            Seed(flower: Flower(name: "Lavender", growthTime: 9, cost: 18, imageName: "Lavender"),
+            Seed(flower: Flower(name: "Zinnia", growthTime: 10, cost: 20, imageName: "Zinnia"),
         ]
-    }
 
     init() {
+        
+        addAllSeedsToShop()
+        
         // Initialize the garden with some default flowers (You can load from data, etc.)
         flowers = [
-            Flower(name: "Rose", growthTime: 10),
-            Flower(name: "Lily", growthTime: 8),
+            Flower(name: "Rose", growthTime: 10, imageName: "Daisy"),
+            Flower(name: "Lily", growthTime: 8, imageName: "Daisy"),
             // Add more initial flowers as needed
         ]
 
@@ -84,6 +85,15 @@ class GardenViewModel: ObservableObject {
         self.player = Player(name: "Player") // Initialize the player with a default name
     }
 
+                 // Fonction pour ajouter toutes les graines dans availableShopItems
+                     private func addAllSeedsToShop() {
+                         for seed in Seed.availableSeeds {
+                             let shopItem = ShopItem(name: "\(seed.flower.name) Seed", category: .seed, cost: seed.cost)
+                             availableShopItems.append(shopItem)
+                         }
+                     }
+
+                 
     private func timeRemainingForNextFreeCoins() -> String {
             let currentTimeStamp = Date().timeIntervalSince1970
             let lastReceivedTimestamp = UserDefaults.standard.double(forKey: "LastReceivedTimestamp")
@@ -163,7 +173,7 @@ class GardenViewModel: ObservableObject {
 
     func plantFlower(_ flowerName: String, growthTime: Int) {
         if coins >= 5 { // Check if the player has enough coins
-        let newFlower = Flower(name: flowerName, growthTime: growthTime)
+            let newFlower = Flower(name: flowerName, growthTime: growthTime, imageName: "")
         flowers.append(newFlower)
         coins -= 5 // Deduct coins from the player for planting a new flower
         // Update player experience when planting a flower

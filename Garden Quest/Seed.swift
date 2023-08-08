@@ -10,11 +10,6 @@ import SwiftUI
 // MARK: - Seed
 struct Seed {
     let flower: Flower
-    let growthTime: Int
-
-    // Initialize the Seed
-    init(flower: Flower, cost: Int) {
-        self.flower = flower
-        self.growthTime = flower.growthTime
-    }
+    let growthTime: TimeInterval
+    let cost: Int
 }
